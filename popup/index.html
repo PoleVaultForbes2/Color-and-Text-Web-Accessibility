@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!-- chrome://extensions/ -->
+
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+    <div class="header">
+      <h1>WCAG Accessibility Tool</h1>
+      <p>Customize web pages for better readability and accessibility</p>
+    </div>
+
+    <div class="content">
+      <div class="info-banner">
+        <strong>How to use:</strong>
+        Select an element type, choose your preferred colors and font size, then click "Apply Style" to see changes. Use "Select Element" to target specific items on the page.
+      </div>
+
+      <div class="section">
+        <div class="section-title">Element Selection</div>
+        
+        <div class="input-group">
+          <label for="elementSelect">Target Element</label>
+          <select id="elementSelect">
+            <option value="html">Entire Page (Root)</option>
+            <option value="body">Page Body</option>
+            <option value="h1">Headings (H1)</option>
+            <option value="p">Paragraphs</option>
+            <option value="a">Links</option>
+            <option value="button">Buttons</option>
+          </select>
+        </div>
+
+        <button id="selectElementBtn" class="button-select">
+          Click to Select Specific Element
+        </button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="section-title">Styling Options</div>
+
+        <div class="input-group">
+          <label for="font-size-selector">Font Size</label>
+          <input type="text" id="font-size-selector" placeholder="e.g., 18px, 1.2em, 120%" />
+        </div>
+
+        <div class="input-group">
+          <label for="textColor">Text Color</label>
+          <div class="color-input-wrapper">
+            <input type="color" id="textColor" value="#000000" />
+            <div class="color-display" id="textColorDisplay">#000000</div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="elementBg">Background Color</label>
+          <div class="color-input-wrapper">
+            <input type="color" id="elementBg" value="#ffffff" />
+            <div class="color-display" id="bgColorDisplay">#ffffff</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="applyStyleBtn" class="button-primary">
+        Apply Style
+      </button>
+
+      <div class="divider"></div>
+
+      <div class="section">
+        <div class="section-title">Reset Options</div>
+        <button id="resetAllBtn" class="button-reset">
+          Reset All Styles
+        </button>
+        <button id="clearSavedDataBtn" class="button-reset" style="margin-top: 10px;">
+          Clear Saved Data
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      Making the web accessible for everyone
+    </div>
+<!-- 
+    <div class="button-group">
+      <button class="reset" id="clearSavedDataBtn">Clear Saved Data</button>
+    </div> -->
+  </div>
+
+  <script src="popup.js"></script>
+  <script>
+    // Update color displays in real-time
+    document.getElementById('textColor').addEventListener('input', (e) => {
+      document.getElementById('textColorDisplay').textContent = e.target.value;
+    });
+    
+    document.getElementById('elementBg').addEventListener('input', (e) => {
+      document.getElementById('bgColorDisplay').textContent = e.target.value;
+    });
+  </script>
+  </body>
+</html>
