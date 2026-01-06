@@ -1,8 +1,3 @@
-<!-- Markdeep: -->
-<meta charset="utf-8">
-<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
-<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js?"></script>
-
 # Color and Text Web Accessibility  
 ### A User-Controlled Browser Extension for Improving Readability
 
