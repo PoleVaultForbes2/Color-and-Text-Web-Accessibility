@@ -83,7 +83,7 @@ The primary goals of this project were to:
 
 ---
 
-![Accessibility Extension Demo](images/extension_1.png)
+![Accessibility Extension Demo](screenshots/extension_1.png)
 
 ## 🧪 Data Collection
 
