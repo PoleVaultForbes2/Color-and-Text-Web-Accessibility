@@ -83,6 +83,8 @@ The primary goals of this project were to:
 
 ---
 
+![Accessibility Extension Demo](images/extension_1.png)
+
 ## 🧪 Data Collection
 
 - **18 total participants**
